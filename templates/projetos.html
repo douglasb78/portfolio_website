@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8" />
+	<title>Douglas Biazus</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<meta name="description" content="" />
+	<link rel="icon" href="favicon.png">
+	<meta name="theme-color" content="#5be18a">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js" integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<link rel="stylesheet" type="text/css" href="normalize.css"/>
+	<link rel="stylesheet" type="text/css" href="auxiliar.css"/>
+	<link rel="stylesheet" type="text/css" href="fadein.css"/>
+	<script type="text/javascript" src="fadein.js"></script>
+	<script type="text/javascript" src="smooth_scrolling.js"></script>
+</head>
+<body>
+	<div id="fadein"></div>
+	<div id="barraSuperior">
+		<h2>{{ informacoes.nome }}</h2>
+		<ul id="menu">
+			<li><a href="{{ url_for('home') }}">Página inicial</a></li>
+			<li><a href="{{ url_for('projetos') }}">Projetos</a></li>
+			<li><a href="{{ url_for('contato') }}">Contato</a></li>
+		</ul>
+	</div>
+	<div id="projetos">
+		<h2 id="tituloConteudo">Projetos:</h2>
+		<ul id="galeriaProjetos">
+			{% for projeto in projetos %}
+			<li class="caixaProjeto">
+				<div class="projetoTitulo"><a href="{{ projeto.link }}">{{ projeto.titulo }}</a></div>
+				<div class="projetoDescricao">{{ projeto.descricao }}</div>
+				<div class="projetoLinguagem">{{ projeto.linguagem }}</div>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@keyframes aparecer {
+    to {
+        opacity: 1;
+    }
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+	background-color: #eee;
+	background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+	background-image: url("tile.png");
+	background-size: 128px;
+    background-attachment: fixed;
+	color: #444;
+	font-family: "Inter", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: <weight>;
+	font-style: normal;
+	-webkit-font-smoothing:antialiased;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: clip;
+}
+
+a,a:visited{color:#07a;text-decoration:none;}
+a:hover{color:#479ec4;text-decoration:none;}
+
+li a svg {
+    margin-right: 8px;
+    margin-bottom: 4px;
+}
+ol, ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#menu {
+	margin-left: 24px;
+	align-self: center;
+}
+
+#menu li {
+	margin-right: 16px;
+	color: #65767d;
+}
+
+#menu li:hover {
+	color: #1b272d;
+}
+
+#menu li:before {
+	content: "\25AA\0020";
+	color: #444;
+}
+
+#barraSuperior{
+	background-color: #eee;
+	background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+	border-bottom: 1px solid #ccc;
+	color: #444;
+	width: 100%;
+	padding: 12px 5.6vw 12px 7.8vw;
+	display: flex;
+}
+
+h1,h2,h3,h4,p {
+	margin: 0;
+}
+
+#projetos, #contato {
+	padding: 6vh 5.6vw 3.8vh 5.6vw;
+}
+
+#contato ul li a i {
+    margin-right: 12px;
+    margin-bottom: 24px;
+}
+
+.caixaProjeto {
+    border: 1px solid #000;
+    border-radius: 2px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    background: #eee;
+    color: #444;
+    margin: 2px;
+    opacity: 0;
+    animation: aparecer 1000ms cubic-bezier(.95,.05,.8,.04) forwards;
+}
+
+.caixaProjeto div {
+    margin-bottom: 4px;
+}
+
+.caixaProjeto div.projetoTitulo {
+    font-size: 18px;
+}
+
+.caixaProjeto div.projetoDescricao {
+    font-size: 14px;
+    min-height: 14vh;
+}
+
+.caixaProjeto div.projetoLinguagem {
+    background: #777;
+    color: #eee;
+    width: fit-content;
+    border: 1px dotted #000;
+    font-size: 14px;
+    padding: 2px 8px 2px 8px;
+}
+
+#tituloConteudo {
+    margin-bottom: 8px;
+}
+
+@media (min-width:800px) and (min-height:600px){
+    .caixaProjeto{ max-width: 23%;}
+	#galeriaProjetos{display: flex; flex-wrap: wrap;}
+	#menu {display: flex;}
+}
+
+@media (max-width:800px) or (max-height:600px){
+	#menu li {margin-top: 12px; margin-bottom: 12px;padding: 5px;border: 1px dotted #000;border-radius: 2px;}
+}

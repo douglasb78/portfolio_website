@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+	background-color: #eee;
+	background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+	background-image: url("tile.png");
+	background-size: 128px;
+    background-attachment: fixed;
+	color: #444;
+	padding: 6vh 5.6vw 3.8vh 7.8vw;
+	font-family: "Inter", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: <weight>;
+	font-style: normal;
+	-webkit-font-smoothing:antialiased;
+}
+
+#socialMedia {margin-top: 5vh;margin-bottom:5vh;}
+
+ol, ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+a,a:visited{color:#07a;text-decoration:none;}
+a:hover{color:#479ec4;text-decoration:none;}
+
+p {
+	text-align: justify;
+}
+
+#parte1, #parte2 {
+	display: inline;
+}
+
+#parte1 {
+	width: 35%;
+}
+
+#parte2 {
+	margin-left: 50%;
+	width: 60%;
+	margin-top: 4vh;
+}
+
+#fotoInfo {
+	display: flex;
+	margin-bottom: 3.5vh;
+}
+
+#fotoInfo div {
+	margin-right: 24px;
+}
+
+#foto img {
+	width: 128px;
+	border-radius: 9px;
+}
+
+#menu {
+	margin-top: 24px;
+	display: flex;
+}
+
+#menu li {
+	margin-right: 12px;
+	color: #65767d;
+}
+
+#menu li:hover {
+	color: #1b272d;
+}
+
+#menu li:before {
+	content: "\25AA\0020";
+	color: #444;
+}
+
+#socialMedia{
+	display: flex;
+}
+
+#socialMedia li {
+	margin-right: 16px;
+}
+
+.itemCurso li {
+	border: 1px solid #fff0;
+	border-radius: 2px;
+	margin: 12px 1px 12px 1px;
+}
+
+.itemCurso li:hover {
+	background: #ffffff3d;
+	border: 1px solid #333;
+	border-radius: 5px;
+	backdrop-filter: blur(5px);
+	transition: 200ms ease 0ms;
+}
+
+.itemCurso li div{
+	padding: 12px;
+}
+
+.itemCurso li h1,h2,h3,h4,p{
+	margin: 0;
+}
+
+@media (min-width:800px) and (min-height:600px){
+	body {display: flex;}
+	#parte1 {position: fixed;}
+	#socialMedia{margin-top: 40vh;}
+	.itemCurso li{display:flex;}
+}
+
+@media (max-width:800px) or (max-height:600px){
+	.itemCurso li{border-color: #000}
+}

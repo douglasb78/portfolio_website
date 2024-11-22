@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8" />
+	<title>Douglas Biazus</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<meta name="description" content="" />
+	<link rel="icon" href="favicon.png">
+	<meta name="theme-color" content="#5be18a">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js" integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<link rel="stylesheet" type="text/css" href="normalize.css"/>
+	<link rel="stylesheet" type="text/css" href="index.css"/>
+	<link rel="stylesheet" type="text/css" href="fadein.css"/>
+	<script type="text/javascript" src="fadein.js"></script>
+	<script type="text/javascript" src="smooth_scrolling.js"></script>
+</head>
+<body>
+	<div id="fadein"></div>
+	<div id="parte1">
+		<div id="fotoInfo">
+			<div id="foto">
+				<img src="avatar.jpg"/>
+			</div>
+			<div>
+				<h1>{{ informacoes.nome }}</h1>
+				<h2>{{ informacoes.descricao }}</h2>
+			</div>
+		</div>
+		<div>
+		<p>
+		{{ informacoes.resumo }}
+		</p>
+		<ul id="menu">
+			<li><a href="{{ url_for('home') }}">Página inicial</a></li>
+			<li><a href="{{ url_for('projetos') }}">Projetos</a></li>
+			<li><a href="{{ url_for('contato') }}">Contato</a></li>
+		</ul>
+		</div>
+		<ul id="socialMedia">
+			<li><a href="{{ informacoes.links.github }}"><i class="fa-brands fa-github fa-2xl"></i></a></li>
+			<li><a href="{{ informacoes.links.linkedin }}"><i class="fa-brands fa-linkedin fa-2xl"></i></a></li>
+			<li><a href="{{ informacoes.links.facebook }}"><i class="fa-brands fa-facebook fa-2xl"></i></a></li>
+			<li><a href="{{ informacoes.links.instagram }}"><i class="fa-brands fa-instagram fa-2xl"></i></a></li>
+		</ul>
+	</div>
+	<div id="parte2">
+	<h3>Formação</h3>
+	<ul class="itemCurso">
+		{% for formacao in formacoes %}
+		<li>
+			<div style="min-width: 8vw;">
+				<p>{{ formacao.periodo }}</p>
+			</div>
+			<div>
+				<h4>{{ formacao.titulo }}</h4>
+				<p>{{ formacao.descricao }}<p>
+			</div>
+		</li>
+    {% endfor %}
+	</ul>
+	<br/>
+	<h3>Conhecimentos, Cursos e Idiomas</h3>
+	<ul class="itemCurso">
+		{% for curso in cursos %}
+		<li>
+			<div style="min-width: 8vw;">
+				<p>{{ curso.periodo }}</p>
+			</div>
+			<div>
+				<h4>{{ curso.titulo }}</h4>
+				<p>{{ curso.descricao }}<p>
+			</div>
+		</li>
+    {% endfor %}
+	</ul>
+	</div>
+</body>
+</html>
