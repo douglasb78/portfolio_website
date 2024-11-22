@@ -11,14 +11,11 @@ Projeto de  site de portfólio desenvolvido em Flask, com exibição de formaç�
 - **Backend**: Flask (Python) e Jinja2 para templates.
 - **Frontend**: HTML, CSS, JS (Efeitos de fade-in e scroll suave)
 
----
-**Demo:**
+## Demonstração:
 
 ![GIF de demonstração do site](demo.gif)
 
----
-
-**Como Executar o Projeto**
+## Como executar o projeto:
 
 1. **Clone o repositório**:
 ```bash
