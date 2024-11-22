@@ -5,7 +5,7 @@ Projeto de  site de portfólio desenvolvido em Flask, com exibição de formaç�
 - **Formações**: Exibe informações sobre ensino.
 - **Cursos e Certificações**: Destaca os cursos e certificações relevantes ao seu perfil.
 - **Projetos**: Apresentar projetos com descrição, linguagens utilizadas e links. (GitHub, site de demonstração, ...)
-- **Informações de dddddddddddddddddddddddddddContato**: Exibir opções de contato, WhatsApp, telefone e e-mail, redes sociais.
+- **Informações de Contato**: Exibir opções de contato, WhatsApp, telefone e e-mail, redes sociais.
 
 
 - **Backend**: Flask (Python) e Jinja2 para templates.
